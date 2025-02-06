@@ -81,11 +81,39 @@ input:checked + .slider:before {
     .form-container {
         max-height: 100vh;
     }
-    .module-container{
-        margin-top: 250px;
+    @media (max-height: 995px) {
+        .module-container {
+            margin-top: 500px;
+            padding-bottom: 50px;
+        }
+    }
+    @media (min-height: 1000px) {
+        .module-container {
+            margin-top: 300px;
+            padding-bottom: 10px;
+        }
     }
 }
+
 select:focus{
     outline: none;
     border: none;
+}
+
+.height{
+    height: 100vh;
+}
+
+#appointmentDropdown {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#appointmentDropdown option {
+    background-color: #94146c;
+    padding: 50px;
+    color: #ffffff;
 }

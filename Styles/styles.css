@@ -55,7 +55,7 @@ body {
     overflow-y: auto;
     background-color: #ffffff;
     color: #333;
-    padding: 20px;
+    padding: 10px;
     height: calc(100vh - 60px);
     word-wrap: break-word;
 }
@@ -87,7 +87,9 @@ body {
     .container {
         grid-template-columns: 1fr;
     }
-
+    .col-8{
+        padding: 0px;
+    }
     .col-4 {
         position: fixed;
         left: 0;
@@ -96,7 +98,6 @@ body {
         transform: translateX(-100%);
         z-index: 999;
     }
-
     .col-4.active {
         transform: translateX(0);
     }
