@@ -22,18 +22,158 @@
     <div class="container">
         <div class="col-4" id="sidebar">
             <div style="margin-top: 30px;">
-                <a href="#spaces" class="module-link active" onclick="showForm('spaces')">Spaces</a>
-                <a href="#modules" class="module-link" onclick="showForm('modules')">Modules</a>
+                <a href="#modules" class="module-link active" onclick="showForm('modules')">Modules</a>
+                <a href="#details" class="module-link" onclick="showForm('details')">Details</a>
             </div>
         </div>
 
         <div class="col-8 height" style="display: flex; justify-content: center; align-items: center;">
             <div style="width: 100%;">
-                <div id="spaces-form" style="padding-right: 20px;">
+                <div id="modules-form" class="module-container">
+                    <form>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="form-heading">
+                                <p style="border-bottom: solid 2px #94146c; margin-top: 50px; margin-left: 10px;">Spaces & Modules</p>
+                            </div>
+                            <div style="display: flex; margin-top: 30px; margin-right: 20px;">
+                                <label for="checkAllModules" style="font-size: 17px;">Check_all</label>
+                                <label class="switch" style="margin-left: 10px; margin-top: 2px;">
+                                    <input type="checkbox" id="checkAllModules" onclick="toggleAllCheckboxes()" class="mat-switch">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>        
+                        </div>
+                    <div class="form-row" style="margin: 0px 10px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                            <label for="fromPractice" class="form-label">From Practice</label>
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                            <label for="toPractice" class="form-label">To Practice</label>
+                        </div>
+                    </div>
+                   
+                    <div class="mat-container">
+                        <div class="mat-item">
+                            <label for="visitTypes">VisitTypes</label>
+                            <label class="switch">
+                                <input type="checkbox" id="visitTypes" name="visitTypes">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="appointmentDropdown">Appointment</label>
+                            <select class="" id="appointmentDropdown" name="appointment" style="border-bottom: none; background-color: transparent; border: none; text-align: end; padding-right: 20px;">
+                                <option value="both">Both Appointments</option>
+                                <option value="future">Future Appointments</option>
+                                <option value="past">Past Appointments</option>
+                                <option value="none">None</option>
+                            </select>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="patient">Patient</label>
+                            <label class="switch">
+                                <input type="checkbox" id="patient" name="patient">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="chartNote">ChartNote</label>
+                            <label class="switch">
+                                <input type="checkbox" id="chartNote" name="chartNote">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="imageOrder">ImageOrder</label>
+                            <label class="switch">
+                                <input type="checkbox" id="imageOrder" name="imageOrder">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="imageResult">ImageResult</label>
+                            <label class="switch">
+                                <input type="checkbox" id="imageResult" name="imageResult">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="imageType">ImageType</label>
+                            <label class="switch">
+                                <input type="checkbox" id="imageType" name="imageType">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="insurance">Insurance</label>
+                            <label class="switch">
+                                <input type="checkbox" id="insurance" name="insurance">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="labResult">LabResult</label>
+                            <label class="switch">
+                                <input type="checkbox" id="labResult" name="labResult">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="memberMigration">MemberMigration</label>
+                            <label class="switch">
+                                <input type="checkbox" id="memberMigration" name="memberMigration">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="exportQuestionnaire">ExportQuestionnaire</label>
+                            <label class="switch">
+                                <input type="checkbox" id="exportQuestionnaire" name="exportQuestionnaire">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="importQuestionnaire">ImportQuestionnaire</label>
+                            <label class="switch">
+                                <input type="checkbox" id="importQuestionnaire" name="importQuestionnaire">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+            
+                        <div class="mat-item">
+                            <label for="otherMedicalDetails">OtherMedicalDetails</label>
+                            <label class="switch">
+                                <input type="checkbox" id="otherMedicalDetails" name="otherMedicalDetails">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    
+                        <div class="btn-container" style="margin-bottom: 20px; text-align: right; margin: 10px 0px;">
+                            <button type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                
+                <div id="details-form" class="details-container" style="padding-right: 20px;">
                     <form>
                         <div class="form-row">
                             <div class="form-heading">
-                                <p style="border-bottom: solid 2px #94146c;">Select Spaces</p>
+                                <p style="border-bottom: solid 2px #94146c; margin-top: 100px;">Enter Details</p>
                             </div>
 
                             <div class="form-group">
@@ -45,136 +185,62 @@
                                 <input type="email" class="form-control" id="toPractice" placeholder=" " required>
                                 <label for="toPractice" class="form-label">To Practice</label>
                             </div>
-
-                            <div class="btn-container">
-                                <button type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                                <label for="fromPractice" class="form-label">From Practice</label>
+                            </div>
+            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                                <label for="toPractice" class="form-label">To Practice</label>
                             </div>
                         </div>
-                    </form>
-                </div>
-
-                <div id="modules-form" class="module-container" style="display: none;">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <div class="form-heading">
-                            <p style="border-bottom: solid 2px #94146c; margin-top: 50px; margin-left: 10px;">Select Modules</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                                <label for="fromPractice" class="form-label">From Practice</label>
+                            </div>
+            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                                <label for="toPractice" class="form-label">To Practice</label>
+                            </div>
                         </div>
-                    <div style="display: flex; margin-top: 30px; margin-right: 20px;">
-                        <label for="checkAllModules" style="font-size: 17px;">Check_all</label>
-                        <label class="switch" style="margin-left: 10px; margin-top: 2px;">
-                            <input type="checkbox" id="checkAllModules" onclick="toggleAllCheckboxes()" class="mat-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>        
-                    </div>
-                    
-                    <form>
-                        <div class="mat-container">
-                            <div class="mat-item">
-                                <label for="visitTypes">VisitTypes</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="visitTypes" name="visitTypes">
-                                    <span class="slider"></span>
-                                </label>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                                <label for="fromPractice" class="form-label">From Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="appointmentDropdown">Appointment</label>
-                                <select class="" id="appointmentDropdown" name="appointment" style="border-bottom: none; background-color: transparent; border: none; text-align: end; padding-right: 20px;">
-                                    <option value="both">Both Appointments</option>
-                                    <option value="future">Future Appointments</option>
-                                    <option value="past">Past Appointments</option>
-                                    <option value="none">None</option>
-                                </select>
+            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                                <label for="toPractice" class="form-label">To Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="patient">Patient</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="patient" name="patient">
-                                    <span class="slider"></span>
-                                </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                                <label for="fromPractice" class="form-label">From Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="chartNote">ChartNote</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="chartNote" name="chartNote">
-                                    <span class="slider"></span>
-                                </label>
+            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                                <label for="toPractice" class="form-label">To Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="imageOrder">ImageOrder</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="imageOrder" name="imageOrder">
-                                    <span class="slider"></span>
-                                </label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="fromPractice" placeholder=" " required>
+                                <label for="fromPractice" class="form-label">From Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="imageResult">ImageResult</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="imageResult" name="imageResult">
-                                    <span class="slider"></span>
-                                </label>
+            
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="toPractice" placeholder=" " required>
+                                <label for="toPractice" class="form-label">To Practice</label>
                             </div>
-                
-                            <div class="mat-item">
-                                <label for="imageType">ImageType</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="imageType" name="imageType">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="insurance">Insurance</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="insurance" name="insurance">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="labResult">LabResult</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="labResult" name="labResult">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="memberMigration">MemberMigration</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="memberMigration" name="memberMigration">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="exportQuestionnaire">ExportQuestionnaire</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="exportQuestionnaire" name="exportQuestionnaire">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="importQuestionnaire">ImportQuestionnaire</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="importQuestionnaire" name="importQuestionnaire">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                
-                            <div class="mat-item">
-                                <label for="otherMedicalDetails">OtherMedicalDetails</label>
-                                <label class="switch">
-                                    <input type="checkbox" id="otherMedicalDetails" name="otherMedicalDetails">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        
+
                             <div class="btn-container" style="margin-bottom: 20px; text-align: right; margin: 10px 0px;">
                                 <button type="submit" class="btn btn-primary">Next</button>
                             </div>

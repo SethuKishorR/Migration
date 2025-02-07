@@ -17,17 +17,17 @@ function closeSidebarOnClickOutside(event) {
 }
 
 function showForm(formType) {
-    document.getElementById('spaces-form').style.display = 'none';
     document.getElementById('modules-form').style.display = 'none';
+    document.getElementById('details-form').style.display = 'none';
 
-    if (formType === 'spaces') {
-        document.getElementById('spaces-form').style.display = 'block';
-        document.querySelector('.module-link.active').classList.remove('active');
-        document.querySelector('[href="#spaces"]').classList.add('active');
-    } else if (formType === 'modules') {
+    if (formType === 'modules') {
         document.getElementById('modules-form').style.display = 'block';
         document.querySelector('.module-link.active').classList.remove('active');
         document.querySelector('[href="#modules"]').classList.add('active');
+    } else if (formType === 'details') {
+        document.getElementById('details-form').style.display = 'block';
+        document.querySelector('.module-link.active').classList.remove('active');
+        document.querySelector('[href="#details"]').classList.add('active');
     }
 }
 

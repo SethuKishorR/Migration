@@ -44,9 +44,9 @@ body {
 
 .col-4 {
     padding-top: 50px;
-    background-color: #f6f6f6;
+    background-color: #d39ec4;
     color: #94146c;
-    height: calc(100vh - 60px);
+    height: 100vh;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
@@ -74,13 +74,17 @@ body {
 }
 
 .module-link:hover {
-    background-color: #d39ec4;
+    background-color: #b45296;
     color: #fff;
 }
 
 .module-link.active {
     background-color: #94146c;
     color: white;
+}
+
+#details-form {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -94,7 +98,7 @@ body {
         position: fixed;
         left: 0;
         width: 250px;
-        height: calc(100vh - 60px);
+        height: 100vh;
         transform: translateX(-100%);
         z-index: 999;
     }
